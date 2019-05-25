@@ -9,8 +9,8 @@ function generateTemplate(name, data, basicElement) {
 
 var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
 var myHeaders = {
-  'X-Client-Id': 'X-Client-Id',
-  'X-Auth-Token': 'X-Auth-Token'
+  'X-Client-Id': '4204',
+  'X-Auth-Token': 'd18d2e7e651de828d5ef27a4cbcbb111'
 };
 
 fetch(baseUrl + '/board', {headers: myHeaders}) 
