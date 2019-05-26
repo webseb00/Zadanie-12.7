@@ -7,13 +7,13 @@ var board = {
     element: document.querySelector('#board .column-container')
 }
 
-document.querySelector('#board .column-container').addEventListener('click', function() {
+document.querySelector('#board .create-column').addEventListener('click', function() {
     var name = prompt('Enter a name of the column');
     var data = new FormData();
 
     data.append('name', name);
 
-    fetch(baseUrl + '/column', { method: 'POST', headers: myHeaders, body: data})
+    fetch(prefix + baseUrl + '/column', { method: 'POST', headers: myHeaders, body: data})
     .then(function(res) {
         return res.json();
     })
