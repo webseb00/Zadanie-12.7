@@ -14,13 +14,13 @@ document.querySelector('#board .create-column').addEventListener('click', functi
     data.append('name', name);
 
     fetch(prefix + baseUrl + '/column', { method: 'POST', headers: myHeaders, body: data})
-    .then(function(res) {
-        return res.json();
-    })
-    .then(function(resp) {
-        var column = new Column(resp.id, name);
-        board.addColumn(column);
-    });
+        .then(function(res) {
+            return res.json();
+        })
+        .then(function(resp) {
+            var column = new Column(resp.id, name);
+            board.addColumn(column);
+        });
     
 });
 

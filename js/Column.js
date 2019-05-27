@@ -31,6 +31,10 @@ function Column(id, name) {
                 self.addCard(card);
             });
         }
+        // Change column title
+        // if(e.target.classList.contains('column-title')) {
+        //     self.renameColumn();
+        // }
     });
 }
 
@@ -48,4 +52,20 @@ Column.prototype = {
                 self.element.parentNode.removeChild(self.element);
             });
     }
+    // renameColumn: function() {
+    //     var newName = prompt('Please, enter new column name', 'No given name');
+    //     var self = this;
+        
+    //     var data = new FormData();
+    //     data.append('name', newName);
+    //     data.append('id', self.id);
+
+    //     fetch(prefix + baseUrl + '/column/' + self.id, {method: 'PUT', headers: myHeaders, body: data})
+    //         .then(function(resp) {
+    //             return resp.json();
+    //         })
+    //         .then(function(resp) {
+    //             self.element.querySelector('.column-title').textContent = newName;
+    //         })
+    // }
 }
