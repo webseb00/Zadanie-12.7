@@ -8,7 +8,7 @@ function Card(id, name) {
     this.element.querySelector('.card').addEventListener('click', function(e) {
     	e.stopPropagation();
 
-    	if (e.target.classList.contains('btn-delete')) {
+    	if (e.target.classList.contains('btn-deleteCard')) {
       		self.removeCard();
         }
         // Change card content

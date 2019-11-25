@@ -5,12 +5,12 @@ function Column(id, name) {
     this.name = name || 'No given name';
     this.element = generateTemplate('column-template', {name: this.name, id: this.id});
 
-    this.element.querySelector('.column').addEventListener('click', function(e) {
-        if(e.target.classList.contains('btn-delete')) {
+    this.element.querySelector('.column-item').addEventListener('click', function(e) {
+        if(e.target.classList.contains('btn-deleteCard')) {
             self.removeColumn();
         }
 
-        if(e.target.classList.contains('add-card')) {
+        if(e.target.classList.contains('btn-addCard')) {
             var cardName = prompt('Enter the name of the card');
             e.preventDefault();
 
@@ -65,6 +65,7 @@ Column.prototype = {
             })
             .then(function(resp) {
                 self.element.querySelector('.column > .column-title').textContent = name;
+                
             });
     }
 }

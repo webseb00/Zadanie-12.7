@@ -4,31 +4,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Zadanie 12-7</title>
+        <title>Tablica Kanban</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
     <body>
         
 
         <div id="board" class="board">
-            <h1>Tablica kanban</h1>
-            <button class="create-column">Dodaj kolumnę</button>
+            <h1 class="heading-primary">Tablica kanban</h1>
+            <button class="btn-createColumn">Dodaj kolumnę</button>
             <div class="column-container"></div>
         </div>
           
         <script id="column-template" type="x-tmpl-mustache">
-            <div class="column">
+            <div class="column-item">
                 <h2 class="column-title">{{ name }}</h2>
                 <ul id={{ id }} class="column-card-list"></ul>
-                <button class="btn-delete">X</button>
-                <button class="add-card">Add a card</button>
+                <button class="btn-deleteCard">X</button>
+                <button class="btn-addCard">Add a card</button>
             </div>
         </script>
           
         <script id="card-template" type="x-tmpl-mustache">
             <div class="card">
                 <p class="card-description">{{ description }}</p>
-                <button class="btn-rename">Rename</button>
-                <button class="btn-delete">x</button>
+                <button class="btn-renameCard">Rename</button>
+                <button class="btn-deleteCard">x</button>
             </div
         </script>
 
